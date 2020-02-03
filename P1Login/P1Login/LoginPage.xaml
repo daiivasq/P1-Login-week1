@@ -33,9 +33,9 @@
 
                 <Image Source="account.png"
                    Grid.Row="0" 
-                   WidthRequest="100"
-                   HeightRequest="100"
-                   Margin="0,50,0,30"
+                   WidthRequest="125"
+                   HeightRequest="110"
+                   Margin="0,100,0,30"
                        VerticalOptions="Center"
              />
             </StackLayout>
@@ -44,7 +44,7 @@
             <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="9" Padding="20,25">
                 <Label
                     Text="Login"
-                    FontSize="32"
+                    FontSize="35"
                     FontAttributes="Bold"
                     TextColor="Black"
                     HorizontalOptions="StartAndExpand"
@@ -52,7 +52,8 @@
                     />
                 <Label
                     Text="Sign Up"
-                    FontSize="18"
+                    FontSize="19"
+                    Margin="-20,10"
                     FontAttributes="Bold"
                     TextColor="Gray"
                     HorizontalOptions="EndAndExpand"
@@ -62,7 +63,7 @@
 
             </StackLayout>
 
-            <!-- "Email adrees or username and Password"  -->
+            <!-- "Email adrees or username and Password" and button "LOG IN"  -->
             <StackLayout  Grid.Row="1" Grid.ColumnSpan="10"  Padding="30,20"  >
 
                 <Entry Placeholder="Username or email address"
@@ -113,12 +114,11 @@
                 />
             </StackLayout>
 
-                        <!-- ICONS AND BUTTON "LOG IN"-->
+                    
             <StackLayout  Grid.Row="2" Grid.ColumnSpan="10"  Padding="30,25">
 
-             
-                
-              <!--"LOGIN WITH" -->
+                <!--"LOGIN WITH" -->
+                <!-- ICONS "GIT HUB, FACEBOOK, INSTAGRAM AND TWITTER   -->
                 <StackLayout Grid.Row="2" HorizontalOptions="Center" Padding ="50,60 ">
 
                     <Label
@@ -154,7 +154,7 @@
                 </StackLayout>
 
             </StackLayout>
-                        <!-- ICONS "GIT HUB, FACEBOOK, INSTAGRAM AND TWITTER   -->
+                      
            
 
         </Grid>

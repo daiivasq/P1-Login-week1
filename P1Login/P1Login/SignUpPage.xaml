@@ -32,18 +32,18 @@
             <Image Source="Camera.png" 
                    Grid.Row="0" 
                    WidthRequest="100"
-                   HeightRequest="100"
-                   Margin="0,50,0,30"
+                   HeightRequest="110"
+                   Margin="0,80,0,30"
                        VerticalOptions="Center"
              />
         </StackLayout>
         
-                           <!--TITLE AND SUBTITLE " SIGN UP AND LOGIN" -->
+                           <!--TITLE AND SUBTITLE "SIGN UP AND LOGIN" -->
 
         <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="9" Padding="20,30">
             <Label
                     Text="Sign Up"
-                    FontSize="30"
+                    FontSize="35"
                     FontAttributes="Bold"
                     TextColor="Black"
                     HorizontalOptions="StartAndExpand"
@@ -52,6 +52,7 @@
             <Label
                     Text="Login"
                     FontSize="20"
+                Margin="-20,10"
                     FontAttributes="Bold"
                     TextColor="Gray"
                     HorizontalOptions="EndAndExpand"
@@ -88,6 +89,7 @@
             <Button ImageSource="ic_check.pnj"
                 Text="SIGN UP"
                     BackgroundColor="Transparent"
+                    FontAttributes="Bold"
                     CornerRadius="30"
                     BorderWidth="2"
                     Opacity="50"
@@ -128,11 +130,6 @@
 
         </StackLayout>
 
-
-       
     </Grid>
-    
-    
-    
     
 </ContentPage>

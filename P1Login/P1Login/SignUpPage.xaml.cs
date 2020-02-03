@@ -20,19 +20,15 @@ namespace P1Login
 
         private async void ButtonSignUp_Clicked(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(UserSignUp.Text) && String.IsNullOrEmpty(PassWordSignUp.Text))
-            {
-                await DisplayAlert("ALERT!", "THERE ARE EMPTY FIELDS", "OK");
-            }
-            else if (PassWordSignUp.Text.Equals(RepeatPass.Text))
-            {
-                await DisplayAlert("ALERT!", "THE FIELDS ARE NOT EQUAL", "OK");
-
-            }
-           else
-            {
-                await DisplayAlert("WELCOME", " ", "OK");
-            }
+            if (String.IsNullOrEmpty(UserSignUp.Text) && String.IsNullOrEmpty(EmailSignUp.Text) && String.IsNullOrEmpty(PassWordSignUp.Text) && String.IsNullOrEmpty(RepeatPass.Text))
+            { await DisplayAlert("ALERT!", "THERE ARE EMPTY FIELDS", "OK"); }
+            else if (String.IsNullOrEmpty(EmailSignUp.Text))
+            { await DisplayAlert("ALERT!", "THE FIELD EMAIL ADDRESS IS EMPTY", "OK"); }
+            else if (String.IsNullOrEmpty(UserSignUp.Text)) { await DisplayAlert ("ALERT!", "THE FIELD USERNAME IS EMPTY", "OK"); }
+            else if (String.IsNullOrEmpty(PassWordSignUp.Text)) { await DisplayAlert("ALERT!", "THE FIELD PASSWORD IS EMPTY", "OK"); }
+            else if (String.IsNullOrEmpty(RepeatPass.Text)) {await DisplayAlert("ALERT!", "THE FIELD 'REPEAT PASSWORD' IS EMPTY", "OK"); }
+            else if (PassWordSignUp.Text != RepeatPass.Text)  { await DisplayAlert("ALERT!", "THE PASSWORD ARE NOT EQUAL", "OK"); }
+            else {  await DisplayAlert("WELCOME", "COMPLETE ", "OK"); }
 
             
         }
