@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="P1Login.Page1">
+
+    <Grid>
+            <!--GRID DEFINITIONS    -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+                                                <!-- CAMERA ICON-->
+        <StackLayout Grid.Row="0" Grid.ColumnSpan="10" Orientation="Vertical" Margin="0,20,0,0" >
+
+            <Image Source="Camera.png" 
+                   Grid.Row="0" 
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   Margin="0,50,0,30"
+                       VerticalOptions="Center"
+             />
+        </StackLayout>
+        
+                           <!--TITLE AND SUBTITLE " SIGN UP AND LOGIN" -->
+
+        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="9" Padding="20,30">
+            <Label
+                    Text="Sign Up"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    HorizontalOptions="StartAndExpand"
+                    
+                    />
+            <Label
+                    Text="Login"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="Gray"
+                    HorizontalOptions="EndAndExpand"
+                    
+                    />
+        </StackLayout>
+
+                         <!-- "Email adrees , username , Password and Repeat Password" and ICONS "eye" -->
+        <StackLayout  Grid.Row="1" Grid.ColumnSpan="10"  Padding="30,20"  >
+
+            <Entry Placeholder="Email address"
+                       PlaceholderColor="Gray"
+                   x:Name="EmailSignUp"
+                       />
+
+            <Entry Placeholder="Username"
+                       PlaceholderColor="Gray"
+                   x:Name="UserSignUp"
+                       />
+            <Entry Placeholder="Password"
+                       PlaceholderColor="Gray"
+                       IsPassword="True"
+                       Grid.ColumnSpan="4"
+                       Grid.Row="1"
+                   x:Name="PassWordSignUp"
+                           />
+            <Entry Placeholder="Repeat Password"
+                       PlaceholderColor="Gray"
+                       IsPassword="True"
+                       Grid.ColumnSpan="5"
+                       Grid.Row="1"
+                   x:Name="RepeatPass"
+                           />
+            <Button ImageSource="ic_check.pnj"
+                Text="SIGN UP"
+                    BackgroundColor="Transparent"
+                    CornerRadius="30"
+                    BorderWidth="2"
+                    Opacity="50"
+                    BorderColor="Gray"
+                    TextColor="Black" 
+                    HorizontalOptions="Fill"
+                    x:Name="ButtonSignUp"
+                    Clicked="ButtonSignUp_Clicked"
+                />
+            <StackLayout Margin="45,-89" >
+             
+            </StackLayout>
+
+            <Image Source="eye.pnj"
+                       HeightRequest="30"
+                       VerticalOptions="Start"
+                HorizontalOptions="End"/>
+            
+            <Image Source="eye.pnj"
+                       HeightRequest="30"
+                 Margin="0,15"
+                       VerticalOptions="Start"
+                HorizontalOptions="End"/>
+
+
+        </StackLayout>
+                        <!--TEXT " terms of service "  -->
+        <StackLayout  Grid.Row="2" Grid.ColumnSpan="10"  Padding="50,90" >
+
+           
+            <Label
+                    Text="Terms of service " 
+                TextColor="Gray"
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                    HorizontalOptions="Center"/>
+
+
+        </StackLayout>
+
+
+       
+    </Grid>
+    
+    
+    
+    
+</ContentPage>
