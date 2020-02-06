@@ -6,12 +6,19 @@
              mc:Ignorable="d"
              x:Class="P1Login.Page1">
 
-    <Grid>
+    <ScrollView>
+   
+    <Grid Padding="30" RowSpacing="10" >
             <!--GRID DEFINITIONS    -->
         <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="55" />
+            
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -27,67 +34,76 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
                                                 <!-- CAMERA ICON-->
-        <StackLayout Grid.Row="0" Grid.ColumnSpan="10" Orientation="Vertical" Margin="0,20,0,0" >
 
-            <Image Source="Camera.png" 
-                   Grid.Row="0" 
+        <Image Source="Camera.png" 
+                   Grid.Row="1" 
+                   Grid.ColumnSpan="10"
                    WidthRequest="100"
                    HeightRequest="110"
-                   Margin="0,80,0,30"
-                       VerticalOptions="Center"
+                   VerticalOptions="Center"
              />
-        </StackLayout>
-        
-                           <!--TITLE AND SUBTITLE "SIGN UP AND LOGIN" -->
+        <!--TITLE AND SUBTITLE "SIGN UP AND LOGIN" -->
 
-        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="9" Padding="20,30">
             <Label
                     Text="Sign Up"
                     FontSize="35"
                     FontAttributes="Bold"
                     TextColor="Black"
                     HorizontalOptions="StartAndExpand"
-                    
+                    Grid.Row="0"
+                    Grid.ColumnSpan="9"
+
                     />
             <Label
                     Text="Login"
                     FontSize="20"
-                Margin="-20,10"
+                    Margin="-20,10"
                     FontAttributes="Bold"
                     TextColor="Gray"
                     HorizontalOptions="EndAndExpand"
-                    
+                    Grid.Row="0"
+                    Grid.ColumnSpan="9"
                     />
-        </StackLayout>
-
-                         <!-- "Email adrees , username , Password and Repeat Password" and ICONS "eye" -->
-        <StackLayout  Grid.Row="1" Grid.ColumnSpan="10"  Padding="30,20"  >
-
+        <!-- "Email adrees , username , Password and Repeat Password" and ICONS : "eye" -->
+       
             <Entry Placeholder="Email address"
-                       PlaceholderColor="Gray"
+                   PlaceholderColor="Gray"
                    x:Name="EmailSignUp"
-                       />
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Grid.ColumnSpan ="8"
+                   VerticalOptions="StartAndExpand"    
+                    />
 
             <Entry Placeholder="Username"
-                       PlaceholderColor="Gray"
+                   PlaceholderColor="Gray"
                    x:Name="UserSignUp"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="8"
+                   VerticalOptions="StartAndExpand"
                        />
             <Entry Placeholder="Password"
                        PlaceholderColor="Gray"
                        IsPassword="True"
-                       Grid.ColumnSpan="4"
-                       Grid.Row="1"
-                   x:Name="PassWordSignUp"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="8"
+                       Grid.Row="4"
+                       VerticalOptions="StartAndExpand"
+                       x:Name="PassWordSignUp"
                            />
             <Entry Placeholder="Repeat Password"
                        PlaceholderColor="Gray"
                        IsPassword="True"
-                       Grid.ColumnSpan="5"
-                       Grid.Row="1"
-                   x:Name="RepeatPass"
+                       VerticalOptions="StartAndExpand"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="8"
+                       Grid.Row="5"
+                       x:Name="RepeatPass"
                            />
+
             <Button ImageSource="ic_check.pnj"
-                Text="SIGN UP"
+                    Text="SIGN UP"
                     BackgroundColor="Transparent"
                     FontAttributes="Bold"
                     CornerRadius="30"
@@ -95,41 +111,40 @@
                     Opacity="50"
                     BorderColor="Gray"
                     TextColor="Black" 
-                    HorizontalOptions="Fill"
+                    VerticalOptions="CenterAndExpand"
                     x:Name="ButtonSignUp"
                     Clicked="ButtonSignUp_Clicked"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="6"
+                    Grid.Row="6"
                 />
-            <StackLayout Margin="45,-89" >
-             
-            </StackLayout>
 
             <Image Source="eye.pnj"
                        HeightRequest="30"
-                       VerticalOptions="Start"
-                HorizontalOptions="End"/>
+                       VerticalOptions="Center"
+                       Grid.Row="4"
+                       Grid.ColumnSpan="9"
+                      HorizontalOptions="End"/>
             
             <Image Source="eye.pnj"
                        HeightRequest="30"
-                 Margin="0,15"
-                       VerticalOptions="Start"
-                HorizontalOptions="End"/>
+                       VerticalOptions="Center"
+                       Grid.Row="5"
+                       Grid.ColumnSpan="9"
+                       HorizontalOptions="End"/>
 
-
-        </StackLayout>
                         <!--TEXT " terms of service "  -->
-        <StackLayout  Grid.Row="2" Grid.ColumnSpan="10"  Padding="50,90" >
 
-           
             <Label
-                    Text="Terms of service " 
+                Grid.Row="7"
+                Grid.ColumnSpan="10"
+                Text="Terms of service " 
                 TextColor="Gray"
-                        FontAttributes="Bold"
-                        FontSize="Subtitle"
-                    HorizontalOptions="Center"/>
-
-
-        </StackLayout>
-
+                FontAttributes="Bold"
+                FontSize="Subtitle"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
     </Grid>
-    
+
+    </ScrollView>
 </ContentPage>
