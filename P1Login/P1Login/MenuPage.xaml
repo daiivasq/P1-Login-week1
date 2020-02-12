@@ -7,7 +7,7 @@
             mc:Ignorable="d"
             NavigationPage.HasNavigationBar="False"
              x:Class="P1Login.MenuPage">
-
+    
     <NavigationPage  Title="Home" IconImageSource="home.png">
         <x:Arguments>
             <local:HomePage/>

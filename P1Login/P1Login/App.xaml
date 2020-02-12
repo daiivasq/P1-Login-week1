@@ -7,7 +7,12 @@
              x:Class="P1Login.App">
     <Application.Resources>
         <ResourceDictionary>
-
+            <Style TargetType="TabbedPage">
+                <Setter  Property="BarBackgroundColor" Value="Red" />
+            </Style>
+            <Style TargetType="NavigationPage">
+                <Setter  Property="BarBackgroundColor" Value="IndianRed" />
+            </Style>
             <Style x:Key="mainLabelStyle" TargetType="Label">
 
                 <Setter Property="TextColor" Value="Red"/>

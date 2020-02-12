@@ -17,7 +17,7 @@ namespace P1Login.ContentPages
             InitializeComponent();
         }
 
-        private void BarsAndHotel_Tapped(object sender, EventArgs e)
+        private void ChangeColor_Tapped(object sender, EventArgs e)
         {
             var select = (MenuView)sender;
             if (select.BackgroundColor == Color.Default)
@@ -31,70 +31,6 @@ namespace P1Login.ContentPages
           
         }
 
-        private void FineDining_Tapped(object sender, EventArgs e)
-        {
-            var select = (MenuView)sender;
-            if (select.BackgroundColor == Color.Default)
-            {
-                select.BackgroundColor = Color.Red;
-            }
-            else
-            {
-                select.BackgroundColor = Color.Default;
-            }
-        }
-
-        private void Coffes_Tapped(object sender, EventArgs e)
-        {
-            var select = (MenuView)sender;
-            if (select.BackgroundColor == Color.Default)
-            {
-                select.BackgroundColor = Color.Red;
-            }
-            else
-            {
-                select.BackgroundColor = Color.Default;
-            }
-        }
-
-        private void Nearby_Tapped(object sender, EventArgs e)
-        {
-            var select = (MenuView)sender;
-            if (select.BackgroundColor == Color.Default)
-            {
-                select.BackgroundColor = Color.Red;
-            }
-            else
-            {
-                select.BackgroundColor = Color.Default;
-            }
-        }
-
-        private void FastFoods_Tapped(object sender, EventArgs e)
-        {
-            var select = (MenuView)sender;
-            if (select.BackgroundColor == Color.Default)
-            {
-                select.BackgroundColor = Color.Red;
-            }
-            else
-            {
-                select.BackgroundColor = Color.Default;
-            }
-        }
-
-        private void FeaturedFoods_Tapped(object sender, EventArgs e)
-        {
-            var select = (MenuView)sender;
-            if (select.BackgroundColor == Color.Default)
-            {
-                select.BackgroundColor = Color.Red;
-            }
-            else
-            {
-                select.BackgroundColor = Color.Default;
-            }
-        }
       
 
     }

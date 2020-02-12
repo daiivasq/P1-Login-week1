@@ -28,7 +28,7 @@
                               
                               >
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BarsAndHotel_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
@@ -42,7 +42,7 @@
                               
                               >
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="FineDining_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
@@ -56,7 +56,7 @@
                               
                               >
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Coffes_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
@@ -69,7 +69,7 @@
                               SecondText="34 place"
                                   x:Name="Nearby">
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Nearby_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
@@ -83,7 +83,7 @@
                               SecondText="29 place"
                                   x:Name="fastFood">
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="FastFoods_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
@@ -98,7 +98,7 @@
                                   x:Name="FeauredFoods">
 
                     <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="FeaturedFoods_Tapped"
+                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login:MenuView.GestureRecognizers>
