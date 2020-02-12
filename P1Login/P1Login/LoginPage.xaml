@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
              x:Class="P1Login.MainPage">
+             
 
     <ScrollView>
         
@@ -53,23 +55,33 @@
                     Text="Login"
                     FontSize="35"
                     FontAttributes="Bold"
-                    TextColor="Black"
+                    Style="{StaticResource mainLabelStyle}"
                     HorizontalOptions="StartAndExpand"
                     Grid.Row="0"
                     Grid.ColumnSpan="10"
                     />
-        <Label
+
+            <Label
                     Text="Sign Up"
                     FontSize="20"
                     Margin="-20,10"
                     FontAttributes="Bold"
                     TextColor="Gray"
+                    Style="{StaticResource mainLabelStyle}"
                     HorizontalOptions="EndAndExpand"
                     Grid.Row="0"
                     Grid.ColumnSpan="9"
-                    />
+                
+                    >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ButtonSignUp_Clicked"
+                                          NumberOfTapsRequired="1"/>
+                    
+                </Label.GestureRecognizers>
 
-        <!--Email adrees or username and Password" and button "LOG IN-->
+            </Label>
+
+            <!--Email adrees or username and Password" and button "LOG IN-->
         <Entry Placeholder="Username or email address"
                        PlaceholderColor="Gray"
                        x:Name="UserLogin"
@@ -89,16 +101,25 @@
                        VerticalOptions="StartAndExpand"
                            />
 
-        <Image Source="eye.pnj"
+            <Image Source="eye.pnj"
                        HeightRequest="30"
                        VerticalOptions="Center"
                        Grid.Row="3"
                        Grid.ColumnSpan="9"
                        HorizontalOptions="End"
-                       />
+                       x:Name="eyeLogin"
+                   
+                 >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="EyeLoginButtom"
+                                          NumberOfTapsRequired="1"/>
+
+                </Image.GestureRecognizers>
+
+            </Image>
 
 
-        <Image Source="gps.pnj"
+            <Image Source="gps.pnj"
                        HeightRequest="30"
                        Grid.Row="4"
                        Grid.ColumnSpan="9"
@@ -110,14 +131,9 @@
         <Button ImageSource="ic_check.pnj"
                     Text="LOG IN"
                     x:Name="ButtonLogIn"
-                    BackgroundColor="Transparent"
-                    CornerRadius="30"
-                    BorderWidth="2"
-                    Opacity="50"
-                    BorderColor="Gray"
-                    TextColor="Black" 
                     HorizontalOptions="Fill"
                     Clicked="ButtonLogIn_Clicked"
+                    Style="{StaticResource mainButtonStyle}"
                     Grid.Row="5"
                     Grid.Column="2"
                     Grid.ColumnSpan="6"

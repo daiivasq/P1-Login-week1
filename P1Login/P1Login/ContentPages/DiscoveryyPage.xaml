@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:p1Login="clr-namespace:P1Login"
+             mc:Ignorable="d"
+             x:Class="P1Login.ContentPages.DiscoveryyPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <p1Login:MenuView Grid.Column="0"
+                              Grid.Row="0"
+                              ImageModel="beer.png"
+                              FirstText="Bars and Hotel"
+                              SecondText="42 place"
+                              x:Name="bars"
+                              
+                              >
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BarsAndHotel_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+                </p1Login:MenuView>
+                <p1Login:MenuView Grid.Column="1"
+                              Grid.Row="0"
+                              ImageModel="camarero.png"
+                              FirstText="Fine Dining"
+                              SecondText="15 place"
+                              x:Name="dining"
+                              
+                              >
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FineDining_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+                </p1Login:MenuView>
+                <p1Login:MenuView Grid.Column="0"
+                              Grid.Row="1"
+                              ImageModel="coffe.png"
+                              FirstText="Cafes"
+                              SecondText="28 place"
+                              x:Name="Coffes"
+                              
+                              >
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Coffes_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+                </p1Login:MenuView>
+
+                <p1Login:MenuView Grid.Column="1"
+                              Grid.Row="1"
+                               ImageModel="maps.png"
+                              FirstText="Nearby"
+                              SecondText="34 place"
+                                  x:Name="Nearby">
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Nearby_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+
+                </p1Login:MenuView>
+
+                <p1Login:MenuView Grid.Column="0"
+                              Grid.Row="2"
+                               ImageModel="menu.png"
+                              FirstText="Fast foods"
+                              SecondText="29 place"
+                                  x:Name="fastFood">
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FastFoods_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+
+                </p1Login:MenuView>
+
+                <p1Login:MenuView Grid.Column="1"
+                              Grid.Row="2"
+                               ImageModel="pizza.png"
+                              FirstText="Featured Foods"
+                              SecondText="21 place"
+                                  x:Name="FeauredFoods">
+
+                    <p1Login:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FeaturedFoods_Tapped"
+                                          NumberOfTapsRequired="1"
+                                              />
+                    </p1Login:MenuView.GestureRecognizers>
+
+                </p1Login:MenuView>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

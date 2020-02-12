@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="P1Login.MenuView"
+             x:Name="opcionView">
+    
+  <ContentView.Content>
+      
+        <Grid  BindingContext="{x:Reference opcionView}">
+          
+            <Image Source="{Binding ImageModel}" 
+                   HeightRequest= "115"
+                   
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"/>
+
+            <Label Text="{Binding FirstText}"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="17"
+                   Padding="20"
+                   VerticalOptions="End"
+                   HorizontalOptions="CenterAndExpand"/>
+            
+            
+            <Label Text="{Binding SecondText}" 
+                   FontSize="16"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"
+                   
+                   VerticalOptions="End"
+                   />
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

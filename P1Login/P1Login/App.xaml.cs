@@ -9,8 +9,8 @@ namespace P1Login
         public App()
         {
             InitializeComponent();
-          MainPage = new MainPage();
-          //MainPage = new Page1 ();
+          MainPage = new NavigationPage(new MainPage());
+         
         }
 
         protected override void OnStart()

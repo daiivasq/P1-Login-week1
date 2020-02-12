@@ -12,9 +12,10 @@ namespace P1Login
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        public Page1()
+        public Page1(string userLogin)
         {
             InitializeComponent();
+            EmailSignUp.Text = userLogin;
         }
 
 
@@ -28,9 +29,17 @@ namespace P1Login
             else if (String.IsNullOrEmpty(PassWordSignUp.Text)) { await DisplayAlert("ALERT!", "THE FIELD PASSWORD IS EMPTY", "OK"); }
             else if (String.IsNullOrEmpty(RepeatPass.Text)) {await DisplayAlert("ALERT!", "THE FIELD 'REPEAT PASSWORD' IS EMPTY", "OK"); }
             else if (PassWordSignUp.Text != RepeatPass.Text)  { await DisplayAlert("ALERT!", "THE PASSWORD ARE NOT EQUAL", "OK"); }
-            else {  await DisplayAlert("WELCOME", "COMPLETE ", "OK"); }
+            else 
+            {
+                await DisplayAlert("WELCOME", "COMPLETE ", "OK");
+                await Navigation.PushAsync(new MenuPage());
+            }
 
-            
+        }
+
+        private async void ButtonLogin(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

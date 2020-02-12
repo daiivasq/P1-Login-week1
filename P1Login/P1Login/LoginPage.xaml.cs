@@ -28,7 +28,21 @@ namespace P1Login
             { await DisplayAlert("ALERT!", "THE FIELD PASSWORD IS EMPTY", "OK");}
             else
             {  await DisplayAlert("WELCOME", "COMPLETE", "OK");
+
+                await Navigation.PushAsync(new MenuPage());
             }
+
+
+        }
+
+        private async void ButtonSignUp_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page1(UserLogin.Text));
+        }
+
+        private void EyeLoginButtom(object sender, EventArgs e)
+        {
+            
         }
     }
 }

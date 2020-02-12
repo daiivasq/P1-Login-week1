@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
              x:Class="P1Login.Page1">
 
     <ScrollView>
@@ -45,10 +46,10 @@
         <!--TITLE AND SUBTITLE "SIGN UP AND LOGIN" -->
 
             <Label
+                    Style="{StaticResource mainLabelStyle}"
                     Text="Sign Up"
                     FontSize="35"
                     FontAttributes="Bold"
-                    TextColor="Black"
                     HorizontalOptions="StartAndExpand"
                     Grid.Row="0"
                     Grid.ColumnSpan="9"
@@ -63,8 +64,14 @@
                     HorizontalOptions="EndAndExpand"
                     Grid.Row="0"
                     Grid.ColumnSpan="9"
-                    />
-        <!-- "Email adrees , username , Password and Repeat Password" and ICONS : "eye" -->
+               >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ButtonLogin"
+                                          NumberOfTapsRequired="1"/>
+
+                </Label.GestureRecognizers>
+            </Label>
+                        <!-- "Email adrees , username , Password and Repeat Password" and ICONS : "eye" -->
        
             <Entry Placeholder="Email address"
                    PlaceholderColor="Gray"
@@ -102,15 +109,10 @@
                        x:Name="RepeatPass"
                            />
 
-            <Button ImageSource="ic_check.pnj"
+            <Button ImageSource="done.png"
                     Text="SIGN UP"
-                    BackgroundColor="Transparent"
+                    Style="{StaticResource mainButtonStyle}"
                     FontAttributes="Bold"
-                    CornerRadius="30"
-                    BorderWidth="2"
-                    Opacity="50"
-                    BorderColor="Gray"
-                    TextColor="Black" 
                     VerticalOptions="CenterAndExpand"
                     x:Name="ButtonSignUp"
                     Clicked="ButtonSignUp_Clicked"
