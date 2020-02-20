@@ -22,10 +22,10 @@
                 
                 <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="0"
-                              ImageModel="beer.png"
-                              BackgroundColor="{Binding Color1}"
-                              FirstText="Bars and Hotel"
-                              SecondText="42 place"
+                              ImageModel="{Binding Beer.ImageModel}"
+                              BackgroundColor="{Binding ColorBeer}"
+                              FirstText="{Binding Beer.FirstText}"
+                              SecondText="{Binding Beer.SecondText}"
                               x:Name="bars"
                               
                               >
@@ -37,10 +37,10 @@
                 </p1Login1:MenuView>
                 <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="0"
-                              BackgroundColor="{Binding Color2}"
-                              ImageModel="camarero.png"
-                              FirstText="Fine Dining"
-                              SecondText="15 place"
+                              BackgroundColor="{Binding ColorDining}"
+                              ImageModel="{Binding Dining.ImageModel}"
+                              FirstText="{Binding Dining.FirstText}"
+                              SecondText="{Binding Dining.SecondText}"
                               x:Name="dining"
                               
                               >
@@ -52,10 +52,10 @@
                 </p1Login1:MenuView>
                 <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="1"
-                              BackgroundColor="{Binding Color3}"
-                              ImageModel="coffe.png"
-                              FirstText="Cafes"
-                              SecondText="28 place"
+                              BackgroundColor="{Binding ColorCoffe}"
+                              ImageModel="{Binding Coffe.ImageModel}"
+                              FirstText="{Binding Coffe.FirstText}"
+                              SecondText="{Binding Coffee.SecondText}"
                               x:Name="Coffes"
                               
                               >
@@ -68,10 +68,10 @@
 
                 <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="1"
-                              BackgroundColor="{Binding Color4}"
-                               ImageModel="maps.png"
-                              FirstText="Nearby"
-                              SecondText="34 place"
+                              BackgroundColor="{Binding ColorNearby}"
+                               ImageModel="{Binding Nearby.ImageModel}"
+                              FirstText="{Binding Nearby.FirstText}"
+                              SecondText="{Binding Nearby.FirstText}"
                                   x:Name="Nearby">
                     <p1Login1:MenuView.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GestureNearbyCommand}"
@@ -83,10 +83,10 @@
 
                 <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="2"
-                              BackgroundColor="{Binding Color5}"
-                               ImageModel="menu.png"
-                              FirstText="Fast foods"
-                              SecondText="29 place"
+                              BackgroundColor="{Binding ColorFastFood}"
+                               ImageModel="{Binding FastFood.ImageModel}"
+                              FirstText="{Binding FastFood.FirstText}"
+                              SecondText="{Binding FastFood.SecondText}"
                                   x:Name="fastFood">
                     <p1Login1:MenuView.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding GestureFastFoodCommand}"
@@ -98,10 +98,10 @@
 
                 <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="2"
-                               BackgroundColor="{Binding Color6}"
-                               ImageModel="pizza.png"
-                              FirstText="Featured Foods"
-                              SecondText="21 place"
+                               BackgroundColor="{Binding ColorFeatured}"
+                               ImageModel="{Binding FeaturedFood.ImageModel}"
+                              FirstText="{Binding FeaturedFood.FirstText}"
+                              SecondText="{Binding FeaturedFood.SecondText}"
                                   x:Name="FeauredFoods">
 
                     <p1Login1:MenuView.GestureRecognizers>

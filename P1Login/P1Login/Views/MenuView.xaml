@@ -13,7 +13,6 @@
           
             <Image Source="{Binding ImageModel}" 
                    HeightRequest= "115"
-                   
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="Center"/>
 

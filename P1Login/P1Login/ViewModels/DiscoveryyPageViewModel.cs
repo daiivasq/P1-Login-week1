@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using P1Login.Models;
+using P1Login.Views;
+using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -6,6 +8,13 @@ namespace P1Login.ViewModels
 {
     public class DiscoveryyPageViewModel : INotifyPropertyChanged
     {
+        public MenuModel Beer { get; set; }
+        public MenuModel Dining { get; set; }
+        public MenuModel Coffe { get; set; }
+        public MenuModel Nearby { get; set; }
+        public MenuModel FastFood { get; set; }
+        public MenuModel FeaturedFood { get; set; }
+
         #region PROP COMMAND
         public ICommand GestureBeerCommand { get; set; }
         public ICommand GestureDiningCommand { get; set; }
@@ -15,93 +24,118 @@ namespace P1Login.ViewModels
         public ICommand GestureFeaturedFoodCommand { get; set; }
         #endregion
         #region PROP COLOR
-        public Color Color1 { get; set; }
-        public Color Color2 { get; set; }
-        public Color Color3 { get; set; }
-        public Color Color4 { get; set; }
-        public Color Color5 { get; set; }
+        public Color ColorBeer { get; set; }
+        public Color ColorDining { get; set; }
+        public Color ColorCoffe { get; set; }
+        public Color ColorNearby { get; set; }
+        public Color ColorFastFood { get; set; }
 
-        public Color Color6 { get; set; }
+        public Color ColorFeatured { get; set; }
         #endregion
+
 
         public DiscoveryyPageViewModel()
         {
-            
-            GestureBeerCommand = new Command(() => {
+            Beer = new MenuModel();
+            Dining = new MenuModel();
+            Coffe = new MenuModel();
+            Nearby = new MenuModel();
+            FastFood = new MenuModel();
+            FeaturedFood = new MenuModel();
 
-                if (Color1 == Color.Default)
+            Beer.ImageModel = "beer.png";
+            Beer.FirstText = "Bars And Hotels";
+            Beer.SecondText = "42 place";
+            Dining.ImageModel = "camarero.png";
+            Dining.FirstText = "Fine Dining";
+            Dining.SecondText = "16 place";
+            Coffe.ImageModel = "coffe.png";
+            Coffe.FirstText = "Cafes";
+            Coffe.SecondText = "25 place";
+            Nearby.ImageModel = "maps.png";
+            Nearby.FirstText = "Nearby";
+            Nearby.SecondText = "42 place";
+            FastFood.ImageModel = "menu.png";
+            FastFood.FirstText = "Fast Foods";
+            FastFood.SecondText = "31 place";
+            FeaturedFood.ImageModel = "pizza.png";
+            FeaturedFood.FirstText = "Featured Foods";
+            FeaturedFood.SecondText = "8 place";
+
+
+            GestureBeerCommand = new Command(() => {
+                if (ColorBeer == Color.White)
                 {
-                    Color1 = Color.Red;
-                    Color2 = Color3 = Color4 = Color5 = Color6 = Color.Default;
+                    ColorBeer = Color.Red;
+                    ColorDining = ColorCoffe = ColorNearby = ColorFastFood = ColorFeatured = Color.White;
+
                 }
                 else
                 {
-                    Color1 = Color.Red;
-                  
-                    
+                    ColorBeer = Color.White;
                 }
             });
             GestureDiningCommand = new Command(() => {
-
-                if (Color2 == Color.Default)
+                if (ColorDining == Color.White)
                 {
-                    Color2 = Color.Red;
-                    Color1 = Color3 = Color4 = Color5 = Color6 = Color.Default;
+                    ColorDining = Color.Red;
+                    ColorBeer = ColorCoffe = ColorNearby = ColorFastFood = ColorFeatured = Color.White;
+
                 }
                 else
                 {
-                    Color2 = Color.Red;
-
+                    ColorDining = Color.Red;
                 }
             });
             GestureCoffeCommand = new Command(() => {
 
-                if (Color3 == Color.Default)
+                if (ColorCoffe == Color.White)
                 {
-                    Color3 = Color.Red;
-                    Color1 = Color2 = Color4 = Color5 = Color6 = Color.Default;
+                     ColorCoffe = Color.Red;
+                    ColorBeer = ColorDining = ColorNearby = ColorFastFood = ColorFeatured = Color.White;
                 }
                 else
                 {
-                    Color3 = Color.Default;
-
+                    ColorCoffe = Color.White;
                 }
             });
             GestureNearbyCommand = new Command(() => {
 
-                if (Color4 == Color.Default)
+                if (ColorNearby == Color.White)
                 {
-                    Color4 = Color.Red;
-                    Color1 = Color2 = Color3 = Color5 = Color6 = Color.Default;
+                    ColorNearby = Color.Red;
+                    ColorBeer = ColorDining = ColorCoffe = ColorFastFood = ColorFeatured = Color.White;
                 }
                 else
                 {
-                    Color4 = Color.Default;
-                }
-            }); GestureFastFoodCommand = new Command(() => {
-
-                if (Color5 == Color.Default)
-                {
-                    Color5 = Color.Red;
-                    Color1 = Color2 = Color3 = Color4 = Color6 = Color.Default;
-                }
-                else
-                {
-
-                    Color5 = Color.Default;
-                }
-            }); GestureFeaturedFoodCommand = new Command(() => {
-
-                if (Color6 == Color.Default)
-                {
-                    Color6 = Color.Red;
-                    Color1 = Color2 = Color3 = Color4 = Color5 = Color.Default;
-                }
-                else
-                {
-                    Color6 = Color.Default;
+                    ColorNearby = Color.White;
                 }
             });
+            GestureFastFoodCommand = new Command(() => {
+
+                if (ColorFastFood == Color.White)
+                {
+                    ColorFastFood = Color.Red;
+                   ColorBeer = ColorDining = ColorCoffe = ColorNearby = ColorFeatured = Color.White;
+                }
+                else
+                {
+                    ColorFastFood = Color.White;
+                }
+            });
+            GestureFeaturedFoodCommand = new Command(() => {
+
+                if (ColorFeatured == Color.White)
+                {
+                    ColorFeatured = Color.Red;
+                    ColorBeer = ColorDining = ColorCoffe = ColorNearby = ColorFastFood = Color.White;
+                }
+                else
+                {
+                    ColorFeatured = Color.White;
+                }
+            });
+
         }
         public event PropertyChangedEventHandler PropertyChanged;
     }
