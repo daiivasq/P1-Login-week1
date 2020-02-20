@@ -4,8 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:p1Login="clr-namespace:P1Login"
+             xmlns:p1Login1="clr-namespace:P1Login.Views"
              mc:Ignorable="d"
-             x:Class="P1Login.ContentPages.DiscoveryyPage">
+             x:Class="P1Login.Views.MenuViews.DiscoveryyPage">
     <ContentPage.Content>
         <ScrollView>
             <Grid Padding="10">
@@ -18,93 +19,98 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-
-                <p1Login:MenuView Grid.Column="0"
+                
+                <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="0"
                               ImageModel="beer.png"
+                              BackgroundColor="{Binding Color1}"
                               FirstText="Bars and Hotel"
                               SecondText="42 place"
                               x:Name="bars"
                               
                               >
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding GestureBeerCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
-                </p1Login:MenuView>
-                <p1Login:MenuView Grid.Column="1"
+                    </p1Login1:MenuView.GestureRecognizers>
+                </p1Login1:MenuView>
+                <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="0"
+                              BackgroundColor="{Binding Color2}"
                               ImageModel="camarero.png"
                               FirstText="Fine Dining"
                               SecondText="15 place"
                               x:Name="dining"
                               
                               >
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GestureDiningCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
-                </p1Login:MenuView>
-                <p1Login:MenuView Grid.Column="0"
+                    </p1Login1:MenuView.GestureRecognizers>
+                </p1Login1:MenuView>
+                <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="1"
+                              BackgroundColor="{Binding Color3}"
                               ImageModel="coffe.png"
                               FirstText="Cafes"
                               SecondText="28 place"
                               x:Name="Coffes"
                               
                               >
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GestureCoffeCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
-                </p1Login:MenuView>
+                    </p1Login1:MenuView.GestureRecognizers>
+                </p1Login1:MenuView>
 
-                <p1Login:MenuView Grid.Column="1"
+                <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="1"
+                              BackgroundColor="{Binding Color4}"
                                ImageModel="maps.png"
                               FirstText="Nearby"
                               SecondText="34 place"
                                   x:Name="Nearby">
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GestureNearbyCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
+                    </p1Login1:MenuView.GestureRecognizers>
 
-                </p1Login:MenuView>
+                </p1Login1:MenuView>
 
-                <p1Login:MenuView Grid.Column="0"
+                <p1Login1:MenuView Grid.Column="0"
                               Grid.Row="2"
+                              BackgroundColor="{Binding Color5}"
                                ImageModel="menu.png"
                               FirstText="Fast foods"
                               SecondText="29 place"
                                   x:Name="fastFood">
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GestureFastFoodCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
+                    </p1Login1:MenuView.GestureRecognizers>
 
-                </p1Login:MenuView>
+                </p1Login1:MenuView>
 
-                <p1Login:MenuView Grid.Column="1"
+                <p1Login1:MenuView Grid.Column="1"
                               Grid.Row="2"
+                               BackgroundColor="{Binding Color6}"
                                ImageModel="pizza.png"
                               FirstText="Featured Foods"
                               SecondText="21 place"
                                   x:Name="FeauredFoods">
 
-                    <p1Login:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ChangeColor_Tapped"
+                    <p1Login1:MenuView.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding GestureFeaturedFoodCommand}"
                                           NumberOfTapsRequired="1"
                                               />
-                    </p1Login:MenuView.GestureRecognizers>
+                    </p1Login1:MenuView.GestureRecognizers>
 
-                </p1Login:MenuView>
-
+                </p1Login1:MenuView>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

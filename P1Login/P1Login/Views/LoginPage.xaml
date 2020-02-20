@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             x:Class="P1Login.MainPage">
+             x:Class="P1Login.Views.MainPage">
              
 
     <ScrollView>
@@ -74,7 +74,7 @@
                 
                     >
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ButtonSignUp_Clicked"
+                    <TapGestureRecognizer Command="{ Binding ButtonSignUpClicked_Command}"
                                           NumberOfTapsRequired="1"/>
                     
                 </Label.GestureRecognizers>
@@ -83,6 +83,7 @@
 
             <!--Email adrees or username and Password" and button "LOG IN-->
         <Entry Placeholder="Username or email address"
+                       Text="{Binding User.Name}"
                        PlaceholderColor="Gray"
                        x:Name="UserLogin"
                        Grid.Row="2"
@@ -92,8 +93,9 @@
                        
                        />
         <Entry Placeholder="Password"
+                       Text="{Binding User.Password}"
                        PlaceholderColor="Gray"
-                       IsPassword="True"
+                       IsPassword="{Binding IsVisible}"
                        x:Name="PassWordLogin"
                        Grid.Row="3"
                        Grid.Column="1"
@@ -101,7 +103,7 @@
                        VerticalOptions="StartAndExpand"
                            />
 
-            <Image Source="eye.pnj"
+            <Image Source="{Binding ImageModel}"
                        HeightRequest="30"
                        VerticalOptions="Center"
                        Grid.Row="3"
@@ -111,7 +113,7 @@
                    
                  >
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="EyeLoginButtom"
+                    <TapGestureRecognizer Command="{Binding ButtonEyeClicked_Command}"
                                           NumberOfTapsRequired="1"/>
 
                 </Image.GestureRecognizers>
@@ -132,7 +134,7 @@
                     Text="LOG IN"
                     x:Name="ButtonLogIn"
                     HorizontalOptions="Fill"
-                    Clicked="ButtonLogIn_Clicked"
+                    Command="{Binding ButtonLoginClicked_Command}"
                     Style="{StaticResource mainButtonStyle}"
                     Grid.Row="5"
                     Grid.Column="2"

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace P1Login
+namespace P1Login.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuView : ContentView
@@ -38,7 +38,6 @@ namespace P1Login
         public MenuView()
         {
             InitializeComponent();
-            BindingContext = opcionView;
         }
     }
 }

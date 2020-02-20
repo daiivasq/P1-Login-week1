@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="P1Login.MenuView"
+             x:Class="P1Login.Views.MenuView"
              x:Name="opcionView">
     
   <ContentView.Content>
@@ -30,7 +30,6 @@
                    FontSize="16"
                    TextColor="Gray"
                    HorizontalOptions="Center"
-                   
                    VerticalOptions="End"
                    />
 

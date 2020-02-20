@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace P1Login.ContentPages
+namespace P1Login.Views.MenuViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BookmarkPage : ContentPage
+    public partial class HomePage : ContentPage
     {
-        public BookmarkPage()
+        public HomePage()
         {
             InitializeComponent();
         }

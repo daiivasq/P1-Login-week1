@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
-             x:Class="P1Login.Page1">
+             x:Class="P1Login.Views.Page1">
 
     <ScrollView>
    
@@ -66,7 +66,7 @@
                     Grid.ColumnSpan="9"
                >
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ButtonLogin"
+                    <TapGestureRecognizer Command="{Binding ButtonLogin_Command}"
                                           NumberOfTapsRequired="1"/>
 
                 </Label.GestureRecognizers>
@@ -74,6 +74,7 @@
                         <!-- "Email adrees , username , Password and Repeat Password" and ICONS : "eye" -->
        
             <Entry Placeholder="Email address"
+                   Text="{Binding User.EmailAdress}"
                    PlaceholderColor="Gray"
                    x:Name="EmailSignUp"
                    Grid.Row="2"
@@ -83,6 +84,7 @@
                     />
 
             <Entry Placeholder="Username"
+                   Text="{Binding User.Name}"
                    PlaceholderColor="Gray"
                    x:Name="UserSignUp"
                    Grid.Row="3"
@@ -91,6 +93,7 @@
                    VerticalOptions="StartAndExpand"
                        />
             <Entry Placeholder="Password"
+                   Text="{Binding User.Password}"
                        PlaceholderColor="Gray"
                        IsPassword="True"
                        Grid.Column="1"
@@ -100,6 +103,7 @@
                        x:Name="PassWordSignUp"
                            />
             <Entry Placeholder="Repeat Password"
+                   Text="{Binding User.RepeatPassword}"
                        PlaceholderColor="Gray"
                        IsPassword="True"
                        VerticalOptions="StartAndExpand"
@@ -115,7 +119,7 @@
                     FontAttributes="Bold"
                     VerticalOptions="CenterAndExpand"
                     x:Name="ButtonSignUp"
-                    Clicked="ButtonSignUp_Clicked"
+                    Command="{Binding ButtonSignUpClicked_Command}"
                     Grid.Column="2"
                     Grid.ColumnSpan="6"
                     Grid.Row="6"

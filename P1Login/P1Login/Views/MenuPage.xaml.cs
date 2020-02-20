@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
-namespace P1Login
+namespace P1Login.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage :Xamarin.Forms.TabbedPage
@@ -18,6 +18,7 @@ namespace P1Login
         {
             InitializeComponent();
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            
         }
     }
 }
