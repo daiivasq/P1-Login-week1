@@ -11,6 +11,7 @@ namespace P1Login.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+        #region PROP
         public UserModel User { get; set; }
 
         public ICommand ButtonLoginClicked_Command { get; set; }
@@ -18,8 +19,9 @@ namespace P1Login.ViewModels
         public ICommand ButtonEyeClicked_Command { get; set; }
         public ImageSource ImageModel { get; set; }
         public bool IsVisible { get; set; }
+        #endregion
 
-        
+
         public LoginPageViewModel() 
         {
             User = new UserModel();
