@@ -30,7 +30,8 @@
                               
                               >
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer  Command="{Binding GestureBeerCommand}"
+                        <TapGestureRecognizer  Command="{Binding GestureGenericCommand}"
+                                               CommandParameter="{Binding Beer}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
@@ -45,7 +46,8 @@
                               
                               >
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GestureDiningCommand}"
+                        <TapGestureRecognizer Command="{Binding GestureGenericCommand}"
+                                              CommandParameter="{Binding Dining}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
@@ -60,7 +62,8 @@
                               
                               >
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GestureCoffeCommand}"
+                        <TapGestureRecognizer Command="{Binding GestureGenericCommand}"
+                                              CommandParameter="{Binding Coffe}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
@@ -74,7 +77,8 @@
                               SecondText="{Binding Nearby.FirstText}"
                                   x:Name="Nearby">
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GestureNearbyCommand}"
+                        <TapGestureRecognizer Command="{Binding GestureGenericCommand}"
+                                              CommandParameter="{Binding Nearby}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
@@ -89,7 +93,8 @@
                               SecondText="{Binding FastFood.SecondText}"
                                   x:Name="fastFood">
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GestureFastFoodCommand}"
+                        <TapGestureRecognizer Command="{Binding GestureGenericCommand}"
+                                              CommandParameter="{Binding FastFood}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
@@ -105,7 +110,8 @@
                                   x:Name="FeauredFoods">
 
                     <p1Login1:MenuView.GestureRecognizers>
-                        <TapGestureRecognizer  Command="{Binding GestureFeaturedFoodCommand}"
+                        <TapGestureRecognizer  Command="{Binding GestureGenericCommand}"
+                                               CommandParameter="{Binding FeaturedFood}"
                                           NumberOfTapsRequired="1"
                                               />
                     </p1Login1:MenuView.GestureRecognizers>
