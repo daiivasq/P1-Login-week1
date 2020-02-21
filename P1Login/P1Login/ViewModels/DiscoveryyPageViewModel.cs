@@ -16,12 +16,7 @@ namespace P1Login.ViewModels
         public MenuModel FeaturedFood { get; set; }
 
         #region PROP COMMAND
-        public ICommand GestureBeerCommand { get; set; }
-        public ICommand GestureDiningCommand { get; set; }
-        public ICommand GestureCoffeCommand { get; set; }
-        public ICommand GestureNearbyCommand { get; set; }
-        public ICommand GestureFastFoodCommand { get; set; }
-        public ICommand GestureFeaturedFoodCommand { get; set; }
+      
         public ICommand GestureGenericCommand { get; set; }
         #endregion
         #region PROP COLOR
